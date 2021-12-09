@@ -21,13 +21,13 @@ const create_item = () => {
   item.id = "item-"+ order;
   item.draggable = true;
 
-   item.addEventListener("dragstart",(event) => {
-  event.DataTranfer.setData("text", event.target.id)
+   item.addEventListener('dragstart',(event) => {
+  event.dataTranfer.setData("text", event.target.id)
 } );
 
 
-item.addEventListener("dragend",(event) => {
-   event.DataTransfer.clearData();
+item.addEventListener('dragend',(event) => {
+   event.dataTransfer.clearData();
 } );
 
 let input = document.createElement("input");
